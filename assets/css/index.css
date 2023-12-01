@@ -1,0 +1,85 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200;1,300&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  }
+
+  header{
+    background-color: #001524 !important;
+  }
+  nav{
+    padding-left: 0%;
+    padding-right: 0%;
+    font-size: 20px;
+    background-color: #001524 !important;
+  }
+
+  .text_for_section1{
+    font-size: 25px !important;
+}
+
+  .text_for_section{
+    font-size: 25px !important;
+}
+
+#allBlogs p , #allBlogs h2 ,#allBlogs h3{
+    color: #001524 !important;
+}
+
+#our_Shop_Here a{
+    background-color: #001524 !important;
+}
+
+#meet_The_Makers p,#meet_The_Makers h2{
+    color: #001524 !important;
+}
+#meet_One_Of_our_team{
+    background-color: #001524 !important;
+}
+
+#faq_Section span{
+    background-color: #001524 !important;
+}
+
+#faq_Section h2{
+    color: #001524 !important;
+}
+
+@media screen and (max-width:992px) {
+    .text_for_section{
+        font-size: 28px !important;
+    }
+    #navbarCollapse{
+        text-align: center;
+    }
+    #lastElementInNavbar{
+        margin-top: 1rem;
+    }
+    .allSliders span , .allSliders h1{
+        width: 75% !important;
+    }
+}
+
+.sliderParent{
+    padding: 0%;
+}
+
+.faqbtn{
+    display: block;
+    font-size: 30px;
+    padding-left: 6%;
+    margin-bottom: 20px;
+}
+
+.active_toggle{
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+footer{
+    background-color: #001524;
+}

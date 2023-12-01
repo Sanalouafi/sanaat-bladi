@@ -1,0 +1,190 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  background-image: url("../img/image\ 48.png");
+}
+
+.text-header {
+  text-align: center;
+  color: beige;
+}
+
+.text-header h1 {
+  padding-top: 8%;
+  font-size: 100px;
+}
+
+.text-header button {
+  margin-top: 8%;
+  margin-left: 8%;
+  font-size: 30px;
+}
+.header-page {
+  background-image: url("../img/0b2fb100a57364581b9298048ae99c42.jpg");
+  background-size: cover;
+  height: 80vh;
+}
+.header-section {
+  padding: 0;
+}
+
+.maroc-title {
+  text-align: center;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.card-Musee {
+  width: 25%;
+  margin-top: 5%;
+}
+.card-Musee img {
+  max-width: 100%;
+  height: 320px;
+}
+
+.les-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.musee {
+  text-align: center;
+  margin-top: 5%;
+}
+.musee-Meknes img {
+  width: 50%;
+  margin-top: 3%;
+}
+
+.musee-Meknes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.img-musee-asafi {
+  max-width: 50%;
+  position: absolute;
+}
+
+.text-img-asfi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-img-asfi img {
+  max-width: 90%;
+}
+.text-asafi {
+  width: 100%;
+  font-size: 30px;
+  z-index: 1;
+  padding-left: 40%;
+  position: relative;
+}
+.text-asafi p {
+  background: #fff4f4a7;
+  padding: 40px;
+}
+
+.arti h3 {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: -5%;
+}
+
+.Asafi {
+  margin-top: 280px;
+}
+
+.photo-et-form {
+  margin-top: 16%;
+  height: 60vh;
+  width: 100%;
+  background-image: url(../img/image\ 52.png);
+  position: relative;
+}
+
+.formDiv {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  background-color: #c34444;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25%;
+}
+*/ .formDiv input {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  border-radius: 20px;
+  border: none;
+  width: 190px;
+  height: 50px;
+  padding: 2%;
+}
+.formDiv input::placeholder {
+  color: red;
+}
+.formDiv button {
+  position: absolute;
+  bottom: 15%;
+  left: 30%;
+}
+.formDiv h4 {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+.formDiv p {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+
+  color: aliceblue;
+  text-align: center;
+}
+
+#email_input {
+  padding: 3%;
+  margin: 100% 25%;
+  border-radius: 26px;
+}
+
+.icon {
+  position: absolute;
+  left: 30%;
+  top: 25%;
+  color: aliceblue;
+  padding-right: 10px;
+}
+
+.icon i {
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.form-email span {
+  color: white;
+  position: absolute;
+  top: 69%;
+  left: 21%;
+  border-radius: 20px;
+  border: none;
+  width: 190px;
+  height: 50px;
+  padding: 2%;
+  display: none;
+}

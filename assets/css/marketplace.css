@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #C9BE9B;
+    --light: #28323A;
+    --dark: #001524;
+}
+
+a {
+    text-decoration: 0;
+}
+
+body {
+    background-image: url(../img/image\ 48.png);
+}
+
+h3 {
+    background: var(--dark);
+    padding: 5%;
+    color: #CED6CF;
+}
+
+.prices input {
+    width: 25%;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    margin-top: 4% !important;
+    height: fit-content;
+    overflow: hidden;
+    top: 0;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.sidebar h3 {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar .position-sticky {
+    padding: 20px;
+}
+
+.sidebar .categorie h6,
+.sidebar .prices h6,
+.sidebar .manufactures h6,
+.sidebar .color h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar input[type="checkbox"] {
+    margin: 0 5px;
+
+}
+
+.sidebar input[type="text"] {
+    border-radius: 10px;
+}
+
+.sidebar button {
+    background-color: #0b6841;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+
+/* cards-products */
+.cards-products {
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+    border-radius: 2%;
+    overflow: hidden;
+    row-gap: 15%;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+    transition: ease .40s;
+    transform: scale(1);
+}
+
+.card-product:hover {
+    transform: scale(1.1);
+}
+
+.image-product {
+    padding-top: 5%;
+    width: 60%;
+}
+
+.image-product img {
+    max-width: 100%;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.description h6 {
+    text-align: center;
+    font-weight: bold;
+    padding: 5% 0;
+}
+
+.description span {
+    color: red;
+    font-weight: bold;
+    padding: 5% 0;
+
+}
+
+.stars-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.share {
+    padding-top: 10%;
+
+}
+
+.share a {
+    padding: 10px 30px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    transform: scale(1);
+
+
+}
+
+.share a:hover {
+    background: #dccd99;
+    transform: scale(1.1);
+
+}
+
+.sort {
+    margin-top: 5%;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+
+}
+
+.sort-show select,
+.categories select {
+    width: 100px;
+    text-align: center;
+}
+
+.sort-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    padding: 0 5%;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.categories {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    color: black;
+    gap: 70%;
+    font-weight: bold;
+    font-size: 1em;
+
+}
+
+.more {
+    display: flex;
+    align-items: center;
+    transition: ease .40s;
+    transform: scale(1);
+    color: #04844e;
+}
+
+.more:hover {
+    transform: scale(1.1);
+}
+
+.more img {
+    width: 10%;
+    height: 10%;
+    margin-left: 5px;
+}
+#sidebar.active{
+    display: block;
+}
+#sidebarToggle{
+    width: 50%;
+    padding:  auto;
+    margin: 5% auto;
+    background-color: #0b6841;
+}
+
+@media (max-width: 768px) {
+    .cards-products {
+        flex-wrap: wrap;
+    }
+
+    .card-product {
+        width: 60%;
+        margin: 2.5%;
+    }
+    #sidebar{
+        position:  relative !important;
+        display: none;
+    }
+    
+
+    
+}
+
+@media (max-width: 576px) {
+    .card-product {
+        width: 60%;
+        margin: 5%;
+    }
+
+    .categories {
+        justify-content: start;
+    }
+
+    #sidebar{
+        position:  relative !important;
+        display: none;
+
+    }
+    
+
+
+}
