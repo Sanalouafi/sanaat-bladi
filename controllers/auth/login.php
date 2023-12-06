@@ -46,9 +46,9 @@ function login($email, $password)
                 if ($_SESSION['role'] == 0) {
                     header('Location: ../pages/admin/dashboard.php');
                 } elseif ($_SESSION['role'] == 1) {
-                    header('Location: ../pages/artisant.php');
+                    header('Location: ../pages/artisant/dashboard.php');
                 } else {
-                    header('Location: ../pages/marketplace.php');
+                    header('Location: ../pages/user/dashboard.php');
                 }
             } else {
                 $error['password'] = "password is incorrect ";
