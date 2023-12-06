@@ -4,60 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/Artisant-Anas.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
   <title>Document</title>
+  <link rel="stylesheet" href="../assets/css/artisant.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <header>
-    <div class="w-lg-75 mx-2 mx-lg-auto position-relative z-2 px-lg-3 py-0 shadow-5 bg-dark">
-      <nav class="fixed-top navbar navbar-expand-lg navbar-dark p-0" id="navbar">
-        <div class="container px-sm-0">
-          <a class="navbar-brand d-inline-block w-lg-64" href="#">
-            LOGO
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav gap-3 mx-lg-auto">
-              <li class="nav-item ">
-                <a class="nav-link rounded-pill" href="index.html" aria-current="page">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link rounded-pill" href="marketplace.html">Marketplace</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link rounded-pill" href="Artisan-Anas.html">Artisant</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link rounded-pill" href="musee.html">Musee</a>
-              </li>
-            </ul>
-            <div class="navbar-nav align-items-lg-center justify-content-end gap-2 ms-lg-4 w-lg-64">
-              <a href="#" class="btn btn-sm btn-white nav-link border-0 rounded-pill w-100 w-lg-auto mb-4 mb-lg-0"
-                id="lastElementInNavbar">Get started</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <?php
+  include("includes/header.php");
 
-  
+  ?>
+
+
 
   <div class="text-center hero-section container-fluid">
     <h1 class="hero-title">Senaat Beladi</h1>
@@ -72,19 +32,19 @@
     <div class="profile-reconnu container-fluid row">
       <div class="profil-cards-top col-9">
         <div class="col artisant-reconnu-card d-flex flex-column align-items-baseline">
-          <img src="assets/images/images 6.png" alt="">
+          <img src="../assets/images/image 6.png" alt="">
           <h4>Name Lastname</h4>
           <p>FEZ 1988</p>
           <p>350 œuvres d'art</p>
         </div>
         <div class="col artisant-reconnu-card d-flex flex-column align-items-baseline">
-          <img src="assets/images/reconnu6.png" alt="">
+          <img src="../assets/images/reconnu6.png" alt="">
           <h4>Name Lastname</h4>
           <p>FEZ 1988</p>
           <p>350 œuvres d'art</p>
         </div>
         <div class="col artisant-reconnu-card d-flex flex-column align-items-baseline">
-          <img src="assets/images/reconnu2.png" alt="">
+          <img src="../assets/images/reconnu2.png" alt="">
           <h4>Name Lastname</h4>
           <p>FEZ 1988</p>
           <p>350 œuvres d'art</p>
@@ -93,19 +53,19 @@
 
       <div class="profil-cards-bottom col-9">
         <div class="artisant-reconnu-card d-flex flex-column align-items-baseline">
-          <img src="assets/images/reconnu3.png" alt="">
+          <img src="../assets/images/reconnu3.png" alt="">
           <h4>Name Lastname</h4>
           <p>FEZ 1988</p>
           <p>350 œuvres d'art</p>
         </div>
         <div class="artisant-reconnu-card d-flex flex-column align-items-baseline">
-          <img src="assets/images/reconnu4.png" alt="">
+          <img src="../assets/images/reconnu4.png" alt="">
           <h4>Name Lastname</h4>
           <p>FEZ 1988</p>
           <p>350 œuvres d'art</p>
         </div>
         <div class="artisant-reconnu-card d-flex flex-column align-items-baseline">
-          <img src="assets/images/reconnu5.png" alt="">
+          <img src="../assets/images/reconnu5.png" alt="">
           <h4>Name Lastname</h4>
           <p>FEZ 1988</p>
           <p>350 œuvres d'art</p>
@@ -124,13 +84,10 @@
           <div class="col-6">
             <h3 class="mb-3">Poterie et céramique</h3>
           </div>
-          <div id="carouselExampleIndicators" class="carousel slide carousel-light pot-slider " style="width: 100%;"
-            data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-light pot-slider " style="width: 100%;" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -138,7 +95,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/pot1.jpg" style="height: 35vh;">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/pot1.jpg" style="height: 35vh;">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -149,7 +106,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid " alt="100%x280" src="assets/images/pot2.jpg" style="height: 35vh;">
+                      <img class="img-fluid " alt="100%x280" src="../assets/images/pot2.jpg" style="height: 35vh;">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -159,7 +116,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/pot3.png" style="height: 35vh;">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/pot3.png" style="height: 35vh;">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -175,7 +132,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/pot44.png" style="height: 35vh;">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/pot44.png" style="height: 35vh;">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -186,7 +143,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/pot5.jpg" style="height: 35vh;">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/pot5.jpg" style="height: 35vh;">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -196,7 +153,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/pot6.jpg" style="height: 35vh;">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/pot6.jpg" style="height: 35vh;">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -208,13 +165,11 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -228,13 +183,10 @@
           <div class="col-6">
             <h3 class="mb-3">Metal</h3>
           </div>
-          <div id="carouselExampleIndicators" class="carousel slide carousel-light metal-slider " style="width: 100%;"
-            data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-light metal-slider " style="width: 100%;" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -242,7 +194,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/metal1.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/metal1.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -253,7 +205,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid " alt="100%x280" src="assets/images/metal2.png">
+                      <img class="img-fluid " alt="100%x280" src="../assets/images/metal2.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -263,7 +215,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/metal3.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/metal3.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -279,7 +231,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/metal4.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/metal4.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -290,7 +242,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/metal5.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/metal5.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -300,7 +252,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/metal6.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/metal6.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -312,13 +264,11 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -332,13 +282,10 @@
           <div class="col-6">
             <h3 class="mb-3">Tapis et moquettes</h3>
           </div>
-          <div id="carouselExampleIndicators" class="carousel slide carousel-light tapis-slider " style="width: 100%;"
-            data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-light tapis-slider " style="width: 100%;" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -346,7 +293,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/tapi1.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/tapi1.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -357,7 +304,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/tapi2.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/tapi2.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -367,7 +314,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/tapi3.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/tapi3.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -383,7 +330,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/tapi4.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/tapi4.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -394,7 +341,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/tapi5.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/tapi5.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -404,7 +351,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/tapi6.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/tapi6.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -416,13 +363,11 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -436,13 +381,10 @@
           <div class="col-6">
             <h3 class="mb-3">Cuir</h3>
           </div>
-          <div id="carouselExampleIndicators" class="carousel slide carousel-light cuir-slider " style="width: 100%;"
-            data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-light cuir-slider " style="width: 100%;" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -450,7 +392,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/cuir1.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/cuir1.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -461,7 +403,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/cuir2.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/cuir2.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -471,7 +413,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/cuir3.png">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/cuir3.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -487,7 +429,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/cuir4.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/cuir4.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -498,7 +440,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/cuir5.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/cuir5.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -508,7 +450,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid" alt="100%x280" src="assets/images/cuir6.jpg">
+                      <img class="img-fluid" alt="100%x280" src="../assets/images/cuir6.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -520,13 +462,11 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -540,13 +480,10 @@
           <div class="col-6">
             <h3 class="mb-3">Sculpture de bois</h3>
           </div>
-          <div id="carouselExampleIndicators" class="carousel slide carousel-light bois-slider " style="width: 100%;"
-            data-bs-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-light bois-slider " style="width: 100%;" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type button data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -554,7 +491,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid card-img" alt="100%x280" src="assets/images/bois1.png">
+                      <img class="img-fluid card-img" alt="100%x280" src="../assets/images/bois1.png">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -565,7 +502,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid card-img" alt="100%x280" src="assets/images/bois2.jpg">
+                      <img class="img-fluid card-img" alt="100%x280" src="../assets/images/bois2.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -575,7 +512,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid card-img" alt="100%x280" src="assets/images/bois3.jpg">
+                      <img class="img-fluid card-img" alt="100%x280" src="../assets/images/bois3.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -591,7 +528,7 @@
 
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid card-img" alt="100%x280" src="assets/images/bois4.jpg">
+                      <img class="img-fluid card-img" alt="100%x280" src="../assets/images/bois4.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -602,7 +539,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid card-img" alt="100%x280" src="assets/images/bois5.jpg">
+                      <img class="img-fluid card-img" alt="100%x280" src="../assets/images/bois5.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -612,7 +549,7 @@
                   </div>
                   <div class="col-md-4 mb-3">
                     <div class="card text-dark">
-                      <img class="img-fluid card-img" alt="100%x280" src="assets/images/bois6.jpg">
+                      <img class="img-fluid card-img" alt="100%x280" src="../assets/images/bois6.jpg">
                       <div class="card-body">
                         <h4 class="card-title">Special title treatment</h4>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -624,13 +561,11 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -644,7 +579,7 @@
     <p>Bienvenue dans la maison de l'artisanat</p>
     <div class="spotlight d-flex flex-column align-items-center">
       <div class="top-spotlight d-flex align-items-center">
-        <div class="spotlight-img"><img src="assets/images/got.jpg" alt=""></div>
+        <div class="spotlight-img"><img src="../assets/images/got.jpg" alt=""></div>
         <div class="spotlight-txt">
           <div class="txt-top">
             <h1>Senaat Beladi's Got <span><b>Talent</b></span></h1>
@@ -671,9 +606,9 @@
         <div class="echantillon d-flex flex-column align-items-center justify-content-center">
           <h4>Echantillons</h4>
           <div class="echatillon-pics d-flex justify-content-center align-items-center " style="width: 90vw; gap: 2vw;">
-            <div class="ech-pic"><img src="assets/images/ech1.png" alt=""></div>
-            <div class="ech-pic "><img src="assets/images/ech2.png" alt=""></div>
-            <div class="ech-pic "><img src="assets/images/ech3.png" alt=""></div>
+            <div class="ech-pic"><img src="../assets/images/ech1.png" alt=""></div>
+            <div class="ech-pic "><img src="../assets/images/ech2.png" alt=""></div>
+            <div class="ech-pic "><img src="../assets/images/ech3.png" alt=""></div>
           </div>
           <p>Vous trouvez ces articles et plus sur <b>Marketplace</b></p>
           <button class="btn-hero">Marketplace</button>
@@ -693,8 +628,8 @@
 
   <section class="blog-section container-fluid d-flex flex-column align-items-center">
     <h1>Blog & stories</h1>
-    <div class="content d-flex">
-      <div class="articles">
+    <div class="content d-flex ">
+      <div class="articles w-50">
         <h2>Articles recents</h2>
         <div class="articles-txt">
           <h4>Hello World</h4>
@@ -721,9 +656,9 @@
             quaerat?</p>
         </div>
       </div>
-      <div class="stories d-flex flex-column">
+      <div class="stories d-flex flex-column ">
         <div class="blog d-flex">
-          <div class="blog-pic"><img src="assets/images/blog-pic.png" alt=""></div>
+          <div class="blog-pic"><img src="../assets/images/blog-pic.png" alt=""></div>
           <div class="blog-txt">
             <h2>Contacts Spotlight</h2>
             <h4>Vous connecter à une carrière dans le divertissement </h4>
@@ -733,7 +668,7 @@
           </div>
         </div>
         <div class="blog d-flex">
-          <div class="blog-pic"><img src="assets/images/blog-pic2.png" alt=""></div>
+          <div class="blog-pic"><img src="../assets/images/blog-pic2.png" alt=""></div>
           <div class="blog-txt">
             <h2>Soutenir nos Membres</h2>
             <h4>Mental health and wellbeing resources catered to creatives</h4>
@@ -744,7 +679,7 @@
           </div>
         </div>
         <div class="blog d-flex">
-          <div class="blog-pic"><img src="assets/images/blog-pic3.png" alt=""></div>
+          <div class="blog-pic"><img src="../assets/images/blog-pic3.png" alt=""></div>
           <div class="blog-txt">
             <h2>L’industrie</h2>
             <h4>Exposition d’un salon de l’artisanat marocaine au brezil </h4>
@@ -761,105 +696,27 @@
   <section class="sponsor-section container-fluid d-flex flex-column align-items-center">
     <h1>Nos sponsors</h1>
     <div class="sponsor-logo d-flex">
-      <img src="assets/images/google-logo.png" alt="">
-      <img src="assets/images/paypal-logo.png" alt="">
-      <img src="assets/images/youcode-logo.png" alt="">
-      <img src="assets/images/artisanat-logo.png" alt="">
+      <img src="../assets/images/google-logo.png" alt="">
+      <img src="../assets/images/paypal-logo.png" alt="">
+      <img src="../assets/images/youcode-logo.png" alt="">
+      <img src="../assets/images/artisanat-logo.png" alt="">
     </div>
   </section>
 
-  <footer class="container-fluid my-5" style="background-color: #001524;">
-    <div class="text-center text-lg-start text-white" >
-        <!-- style="background-color: #45526e -->
-      <div class="container p-4 pb-0">
-        <section class="">
-          <div class="row">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold"> Sanaat Beladi </h6>
-              <p>
-                Plongez dans le monde vibrant de l'artisanat marocain. 
-                Chez Sanaat Beladi, nous vous proposons une sélection 
-                de trésors authentiques.
-              </p>
-            </div>
-            <hr class="w-100 clearfix d-md-none" />
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Les pages</h6>
-              <p>
-                <a class="text-white">Accueil</a>
-              </p>
-              <p>
-                <a class="text-white">Marketplace</a>
-              </p>
-              <p>
-                <a class="text-white">Artisant</a>
-              </p>
-              <p>
-                <a class="text-white">Musee</a>
-              </p>
-            </div>
-            <hr class="w-100 clearfix d-md-none" />
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Useful links
-              </h6>
-              <p>
-                <a class="text-white">Your Account</a>
-              </p>
-              <p>
-                <a class="text-white">Get started</a>
-              </p>
-              <p>
-                <a class="text-white">Shipping Rates</a>
-              </p>
-              <p>
-                <a class="text-white">Help</a>
-              </p>
-            </div>
-            <hr class="w-100 clearfix d-md-none" />
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p><i class="fas fa-home mr-3"></i> Youssofia, 6FWH+X8 Youssoufia, Morocco</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 212 6 00 00 00 00</p>
-              <p><i class="fas fa-print mr-3"></i> + 212 6 00 00 00 00</p>
-            </div>
-          </div>
-        </section>
-        <hr class="my-3">
-        <section class="p-3 pt-0">
-          <div class="row d-flex align-items-center">
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-              <div class="p-3">
-                © 2023 Copyright: 2b || !2b
-                <a class="text-white" href="#"></a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-</footer>
+  <?php
+  include("includes/footer.php");
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-
-
+  ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="assets/js/artisant-Anas.js"></script>
+  <script src="../assets/js/artisant-Anas.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/js/bootstrap/bootstrap.min.js"></script>
 </body>
 
 </html>

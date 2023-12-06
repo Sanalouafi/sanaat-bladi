@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
         <div class="sidebar pe-4 pb-3">
             <nav style="background: #28323A;" class="navbar bg-light navbar-light">
-                <a href="dashboard.html" class="navbar-brand mx-4 mb-3">
+                <a href="dashboard.php" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary">DASHMIN</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -345,8 +345,8 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="assets/js/chart.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
+    <script src="../assets/js/chart.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
 </body>
 <script>
     var currentPage = window.location.href;

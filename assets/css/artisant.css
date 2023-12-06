@@ -1,27 +1,7 @@
-/* Show the menu when the burger icon is clicked */
-/* .show-menu {
-    display: block;
-    position: absolute;
-    top: 60px; /* Adjust as needed */
-    /* left: 0;
-    background-color: #333; */
-    /* width: 100%; */
-/* }  */
 
-/* Style the menu items */
-/* .navbar-nav {
-    text-align: center;
+a{
+    text-decoration: none !important;
 }
-
-.nav-item {
-    padding: 10px 0;
-}
-
-.nav-link {
-    color: #fff;
-    font-size: 18px;
-} */
-
 header div{
     
     padding-top: 0.5vh;
@@ -36,11 +16,7 @@ header div{
     background-color: #001524;
     padding-left: 8vw;
     padding-right: 8vw;
-    /* color: white; */
 }
-/* .burger-icon, .close-icon {
-    display: none;
-} */
 
 .navbar-nav{
     gap: 3vw;
@@ -56,7 +32,7 @@ body{
 .hero-section{
     padding-top: 15vh;
     height: 100vh;
-    background-image: url('/img/image\ 4.png');
+    background-image: url('../images/image\ 4.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -120,7 +96,7 @@ body{
     padding-right: 7vw;
 }
 .card img {
-    height: 35vh/* Ensures the image covers the entire container while maintaining aspect ratio */
+    height: 35vh;
   }
 .col-6 h3{
     color: #001524;
@@ -146,7 +122,7 @@ body{
    
 }
 .pot-slider{
-    background-image: url('/img/image\ 12.png');
+    background-image: url('../images/image\ 12.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -156,7 +132,7 @@ body{
     padding-right: 10vw;
 }
 .tapis-slider{
-    background-image: url('/img/image\ 16.png');
+    background-image: url('../images/image\ 16.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -166,7 +142,7 @@ body{
     padding-right: 10vw;
 }
 .cuir-slider{
-    background-image: url('/img/image\ 20.png');
+    background-image: url('../images/image\ 20.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -176,7 +152,7 @@ body{
     padding-right: 10vw;
 }
 .metal-slider{
-    background-image: url('/img/image\ 24.png');
+    background-image: url('../images/image\ 24.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -186,7 +162,7 @@ body{
     padding-right: 10vw;
 }
 .bois-slider{
-    background-image: url('/img/image\ 28.png');
+    background-image: url('../images/image\ 28.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -196,7 +172,7 @@ body{
     padding-right: 10vw;
 }
 .spotlight{
-    background-image: url('/img/got-section.png');
+    background-image: url('../images/got-section.png');
     background-color: rgb(0,0,0 , 0.5);
     background-blend-mode: multiply;
     background-size: cover;
@@ -331,20 +307,20 @@ form{
 
 @media (max-width: 768px) {
     .navbar-brand {
-        text-align: left; /* Adjust the alignment as needed */
+        text-align: left;
     }
 
     .navbar-nav {
-        display: none; /* Hide the list items on mobile */
+        display: none; 
     }
 
     .nav-link.text-light {
-        display: none; /* Hide the "Commencer" anchor on mobile */
+        display: none;
     }
 
     .burger-icon {
-        display: block; /* Ensure the burger icon is displayed */
-        float: right; /* Align the burger icon to the right */
+        display: block;
+        float: right;
     }
     /****artiste reconnu****/
     .profil-cards-bottom{
@@ -390,10 +366,6 @@ form{
         padding: 0;
     }
 
-    /* .ech-pic img{
-        margin: 0 auto;
-        display: block;
-    } */
     .echatillon-pics{
         display: flex;
         flex-direction: column;
@@ -428,28 +400,11 @@ form{
         width: 100%;
     }
     .stories{
-        gap: 5vh;
+        row-gap: 10vh;
     }
     
 }
 
-/* @media (max-width: 768px) {
-    .burger-icon {
-        display: block;
-        cursor: pointer;
-    }
-    .close-icon {
-        display: none;
-        cursor: pointer;
-    } */
-    /* Style the burger icon and close icon here */
-    /* .burger-icon .bar, .close-icon .bar {
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        margin: 6px 0;
-    }
-} */
 
 
 
