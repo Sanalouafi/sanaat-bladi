@@ -1,8 +1,31 @@
 <?php
-
 include __DIR__ . "/../../controllers/produit.php";
 
-$result = show_produit(); ?>
+
+$query_cate = "SELECT * FROM categorie";
+$result_cate = mysqli_query($conn, $query_cate);
+
+$query_mate = "SELECT * FROM materiel";
+$result_mate = mysqli_query($conn, $query_mate);
+
+if (isset($_POST['submit'])) {
+    $nom =mysqli_real_escape_string($conn,$_POST['nom_prod']) ;
+    $descreption = mysqli_real_escape_string($conn,$_POST['descreption']);
+    $prix =mysqli_real_escape_string($conn, $_POST['prix']);
+    $categorie = $_POST['categorie'];
+    $materiel = $_POST['materiel'];
+    $photo = $_FILES['photo']['name'];
+    $temp_name = $_FILES['photo']['tmp_name'];
+    $folder = "../../assets/images/" . $photo;
+    if (move_uploaded_file($temp_name, $folder)) {
+        echo "File moved successfully.";
+    } else {
+        echo "Error moving file.";
+    }
+$result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
+   
+};
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +47,7 @@ $result = show_produit(); ?>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../../assets/css/dashboard.css" rel="stylesheet">
 </head>
 
@@ -33,6 +56,41 @@ $result = show_produit(); ?>
         .cube {
             height: 10vh !important;
 
+        }
+
+        .card {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card img {
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .card label {
+            margin-top: 30px;
+            text-align: center;
+            height: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .form-input-label,
+        .form-label {
+            color: white;
+
+        }
+
+        .card input {
+            display: none;
         }
     </style>
     <div class="container-xxl position-relative bg-white d-flex p-0">
@@ -54,10 +112,13 @@ $result = show_produit(); ?>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="../admn/dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="../categorie/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
-                    <a href="./materiel/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
-                    <a href="show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
+                    <a href="dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="categories.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
+                    <a href="materiels.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
+                    <a href="artisants.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Artisant</a>
+                    <a href="produits.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>produits</a>
+
+
                 </div>
 
             </nav>
@@ -72,9 +133,6 @@ $result = show_produit(); ?>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-
-
-
 
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
@@ -162,76 +220,65 @@ $result = show_produit(); ?>
                         <div class="col-sm-12 col-xl-12">
                             <div class="bg-dark text-center rounded p-4">
 
-                                <a href="add.php" class="btn btn-success mb-3">Add New</a>
-
-                                <!-- Add Modal -->
-                                <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="addModalLabel">Add New Record</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div class="container d-flex justify-content-center" style="margin-top:5%;">
+                                    <form  method="POST" enctype="multipart/form-data" style="width:50vw; min-width:300px;">
+                                        <div class="card">
+                                            <img src="img/user.png" alt="image" id="image">
+                                            <label for="input-file">Choose Image</label>
+                                            <input type="file" accept="image/jpg , image/png , image/jpeg" id="input-file" name="photo" required>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">nom de produit:</label>
+                                                <input type="text" class="form-control" name="nom_prod" placeholder="nom de produit" required>
                                             </div>
-                                            <div class="modal-body">
-                                                <form method="post">
-                                                    <div class="mb-3">
-                                                        <label class="form-label">Nom:</label>
-                                                        <input type="text" class="form-control" name="nom" placeholder="Entrer le nom de categorie" required>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" name="submit" class="btn btn-primary">Save changes</button>
-                                                    </div>
-                                                </form>
+
+                                            <div class="col">
+                                                <label class="form-label">Description:</label>
+                                                <input type="text" class="form-control" name="descreption" placeholder="description" required>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Prix:</label>
+                                            <input type="number" class="form-control" name="prix" placeholder="prix en MAD" required>
+                                        </div>
+
+                                        
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <label class="form-label">categorie:</label>
+
+                                                <select name="categorie" class="form-control">
+                                                    <option value="">all</option>
+
+                                                    <?php
+                                                    while ($row_cate = mysqli_fetch_assoc($result_cate)) {
+                                                        echo '<option value="' . $row_cate['id'] . '">' . $row_cate['nom'] .  '</option>';
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+
+                                            <div class="col">
+                                                <label class="form-label">materiel:</label>
+
+                                                <select name="materiel" class="form-control">
+                                                    <option value="">all</option>
+                                                    <?php
+                                                    while ($row_materiel = mysqli_fetch_assoc($result_mate)) {
+                                                        echo '<option value="' . $row_materiel['id'] . '">' . $row_materiel['nom'] .  '</option>';
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row ms-1 mt-4 justify-content-center">
+                                            <button type="submit" name="submit" class="btn btn-success col-3 me-3">Save changes</button>
+                                            <a href="produits.php" class="btn btn-danger col-3">Cancel</a>
+                                        </div>
+                                    </form>
                                 </div>
-
-
-                                <table class="table table-hover text-center">
-                                    <table class="table table-hover text-center">
-                                        <thead class="table-dark">
-                                            <tr data-aos="fade-left" data-aos-duration="1500">
-                                                <th scope="col-6" data-aos="fade-left"> photo</th>
-
-                                                <th scope="col-6" data-aos="fade-left"> nom</th>
-                                                <th scope="col-6" data-aos="fade-left"> descreption</th>
-                                                <th scope="col-6" data-aos="fade-left"> prix</th>
-                                                <th scope="col-6" data-aos="fade-left"> materiel</th>
-                                                <th scope="col-6" data-aos="fade-left"> categorie</th>
-                                                <th scope="col-6" data-aos="fade-left">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody data-aos="fade-right" data-aos-duration="1500">
-                                            <?php
-                                            while ($row = mysqli_fetch_assoc($result)) {
-                                            ?>
-
-                                                <tr>
-                                                    <td><img style="width: 20vh;height:20vh;" src="<?= $row['photo']; ?>" alt="Product Photo"></td>
-                                                    <td><?= $row['nom']; ?></td>
-                                                    <td><?= $row['description']; ?></td>
-                                                    <td><?= $row['prix']; ?></td>
-                                                    <td><?= $row['materiel_id']; ?></td>
-                                                    <td><?= $row['categorie_id']; ?></td>
-
-                                                    <td>
-                                                        <a href="edit.php?id=<?= $row['id'] ?>" class="link-dark">
-                                                            <i class='bx bxs-pencil fs-5 me-3'></i>
-                                                        </a>
-                                                        <a href="delete.php?id=<?= $row['id'] ?>" class="link-danger">
-                                                            <i class='bx bxs-user-x fs-5'></i>
-                                                        </a>
-                                                    </td>
-
-
-                                                </tr>
-                                            <?php } ?>
-                                        </tbody>
-                                    </table>
-                                </table>
-
 
                             </div>
                         </div>
@@ -244,47 +291,6 @@ $result = show_produit(); ?>
         </div>
     </div>
     <!-- Content End -->
-    <a href="" data-delete="<?= $row['id'] ?>" class="link-danger">
-        <i class='bx bxs-user-x fs-5'></i>
-    </a>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.addEventListener("click", function(event) {
-                var deleteButton = event.target.closest(".link-danger");
-
-                if (deleteButton) {
-                    event.preventDefault();
-
-                    var idToDelete = deleteButton.getAttribute("data-delete");
-
-                    if (confirm("Are you sure you want to delete this item?")) {
-                        var xhr = new XMLHttpRequest();
-                        xhr.open("GET", `delete.php?id=${idToDelete}`, true);
-                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-                        xhr.onreadystatechange = function() {
-                            if (xhr.readyState === 4) {
-                                if (xhr.status === 200) {
-                                    console.log(xhr.responseText);
-                                    // Add additional logic based on your requirements
-                                    // For example, update the UI or reload the page
-                                } else {
-                                    console.error("Error:", xhr.statusText);
-                                }
-                            }
-                        };
-
-                        xhr.onerror = function() {
-                            console.error("Network error");
-                        };
-
-                        xhr.send();
-                    }
-                }
-            });
-        });
-    </script>
 
 
     <!-- JavaScript Libraries -->
@@ -294,6 +300,17 @@ $result = show_produit(); ?>
     <script src="js/dashboard.js"></script>
 </body>
 <script>
+    AOS.init();
+</script>
+<script>
+    // Sidebar Toggler
+    document
+        .querySelector(".sidebar-toggler")
+        .addEventListener("click", function() {
+            document.querySelector(".sidebar").classList.toggle("open");
+            document.querySelector(".content").classList.toggle("open");
+            return false;
+        });
     var currentPage = window.location.href;
 
     var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
@@ -303,15 +320,12 @@ $result = show_produit(); ?>
             link.classList.add("active");
         }
     });
-    AOS.init();
-    // Sidebar Toggler
-    document
-        .querySelector(".sidebar-toggler")
-        .addEventListener("click", function() {
-            document.querySelector(".sidebar").classList.toggle("open");
-            document.querySelector(".content").classList.toggle("open");
-            return false;
-        });
+    let image = document.getElementById("image");
+    let input = document.getElementById("input-file");
+
+    input.onchange = () => {
+        image.src = URL.createObjectURL(input.files[0]);
+    }
 </script>
 
 </html>
