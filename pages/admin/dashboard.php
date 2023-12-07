@@ -1,3 +1,13 @@
+<?php
+session_start();
+include __DIR__ . "/../../controllers/auth/login.php";
+if (!isset($_SESSION['id'])) {
+    header("Location:../../auth/sign_login.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +28,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/dashboard.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,124 +41,16 @@
     </style>
     <div class="container-xxl position-relative bg-white d-flex p-0">
 
-        <div class="sidebar pe-4 pb-3">
-            <nav style="background: #28323A;" class="navbar bg-light navbar-light">
-                <a href="dashboard.php" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary">DASHMIN</h3>
-                </a>
-                <div class="d-flex align-items-center ms-4 mb-4">
-                    <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
-                        </div>
-                    </div>
-                    <div class="ms-3">
-                        <h6 class="mb-0">User-name</h6>
-                        <span>Admin</span>
-                    </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <a href="dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="categories.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
-                    <a href="materiels.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
-                    <a href="artisants.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Artisant</a>
-                    <a href="produits.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
-
-
-                </div>
-
-            </nav>
-        </div>
+        <?php
+        include('includes/sidebar.php');
+        ?>
 
 
         <div class="content">
-            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="dashboard.php" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-home"></i></h2>
-                </a>
-                <a href="#" class="sidebar-toggler flex-shrink-0">
-                    <i class="fa fa-bars"></i>
-                </a>
 
-                <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">User-name send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">User-name send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">User-name send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all message</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notificatin</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Profile updated</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">New user added</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Password changed</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all notifications</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.png" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">User-name</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-
+            <?php
+            include('includes/navbar.php');
+            ?>
 
             <div class="container-fluid pt-4 px-4" id="content-container">
                 <div class="row g-4">
@@ -225,7 +127,7 @@
                                     <a href="">Show All</a>
                                 </div>
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -235,7 +137,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -245,7 +147,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -255,7 +157,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center pt-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -346,7 +248,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../assets/js/chart.min.js"></script>
-    <script src="../assets/js/dashboard.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
 </body>
 <script>
     var currentPage = window.location.href;

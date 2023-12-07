@@ -3,8 +3,6 @@
 include __DIR__ . '/../../models/auth/signup.php';
 
 session_start();
-
-
 $msg_error = '';
 $msg_email_error = '';
 $msg_email = '';

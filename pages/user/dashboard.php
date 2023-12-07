@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/dashboard.css" rel="stylesheet">
+    <link href="../../assets/css/dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">User-name send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -89,7 +89,7 @@
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">User-name send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -99,7 +99,7 @@
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">User-name send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -136,7 +136,7 @@
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                            <img class="rounded-circle me-lg-2" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">User-name</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
@@ -225,7 +225,7 @@
                                     <a href="">Show All</a>
                                 </div>
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -235,7 +235,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -245,7 +245,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center border-bottom py-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -255,7 +255,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center pt-3">
-                                    <img class="rounded-circle flex-shrink-0" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
                                             <h6 class="mb-0">User-name</h6>
@@ -346,7 +346,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../assets/js/chart.min.js"></script>
-    <script src="../assets/js/dashboard.js"></script>
+    <script src="../../assets/js/dashboard.js"></script>
 </body>
 <script>
     var currentPage = window.location.href;

@@ -16,7 +16,7 @@ function login($email, $password)
 
     if (empty($email)) {
         $error['email'] = "email is required";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
         $error['email'] = "email mast be validate Email";
     } else {
         $error['email'] = "";
@@ -40,7 +40,7 @@ function login($email, $password)
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
             if (password_verify($password, $user["password"])) {
-                $_SESSION['name'] = $user['name'];
+                $_SESSION['name'] = $user['prenom']." ".$user['nom'];
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['role'] = $user['role_id'];
                 if ($_SESSION['role'] == 0) {
