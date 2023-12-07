@@ -213,7 +213,7 @@ $result = show_cate(); ?>
                                                     <a href="edit.php?id=<?= $row['id'] ?>" class="link-dark">
                                                         <i class='bx bxs-pencil fs-5 me-3'></i>
                                                     </a>
-                                                    <a href="" data-delete='<?= $row['id'] ?>' class="link-danger">
+                                                    <a href="delete.php?id=<?= $row['id'] ?>" class="link-danger">
                                                         <i class='bx bxs-user-x fs-5'></i>
                                                     </a>
                                                 </td>
@@ -255,7 +255,7 @@ $result = show_cate(); ?>
             xhr.send();
         }
     </script>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.addEventListener("click", function(event) {
                 var deleteButton = event.target.closest(".link-danger");
@@ -291,7 +291,7 @@ $result = show_cate(); ?>
                 }
             });
         });
-    </script>
+    </script> -->
 
 
     <!-- JavaScript Libraries -->

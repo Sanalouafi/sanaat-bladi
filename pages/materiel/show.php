@@ -209,7 +209,7 @@ $result = show_mate(); ?>
                                                     <a href="edit.php?id=<?= $row['id'] ?>" class="link-dark">
                                                         <i class='bx bxs-pencil fs-5 me-3'></i>
                                                     </a>
-                                                    <a href="" data-delete='<?= $row['id'] ?>' class="link-danger">
+                                                    <a href="delete.php?id=<?= $row['id'] ?>" class="link-danger">
                                                         <i class='bx bxs-user-x fs-5'></i>
                                                     </a>
                                                 </td>
@@ -235,44 +235,7 @@ $result = show_mate(); ?>
         <i class='bx bxs-user-x fs-5'></i>
     </a>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.addEventListener("click", function(event) {
-                var deleteButton = event.target.closest(".link-danger");
-
-                if (deleteButton) {
-                    event.preventDefault();
-
-                    var idToDelete = deleteButton.getAttribute("data-delete");
-
-                    if (confirm("Are you sure you want to delete this item?")) {
-                        var xhr = new XMLHttpRequest();
-                        xhr.open("GET", `delete.php?id=${idToDelete}`, true);
-                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-                        xhr.onreadystatechange = function() {
-                            if (xhr.readyState === 4) {
-                                if (xhr.status === 200) {
-                                    console.log(xhr.responseText);
-                                    // Add additional logic based on your requirements
-                                    // For example, update the UI or reload the page
-                                } else {
-                                    console.error("Error:", xhr.statusText);
-                                }
-                            }
-                        };
-
-                        xhr.onerror = function() {
-                            console.error("Network error");
-                        };
-
-                        xhr.send();
-                    }
-                }
-            });
-        });
-    </script>
-
+   
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

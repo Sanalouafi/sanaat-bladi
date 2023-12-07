@@ -5,7 +5,6 @@ if (isset($_GET['searchTerm'])) {
     $searchTerm = $_GET['searchTerm'];
     $result = search_cate($searchTerm);
 
-    // Output the updated table rows
     while ($row = mysqli_fetch_assoc($result)) {
         echo "<tr>";
         echo "<td>" . $row['nom'] . "</td>";
