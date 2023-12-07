@@ -38,10 +38,25 @@ function show_produit()
 function edit_produit($id)
 {
     global $conn;
-    $result = mysqli_query($conn, editProduit($id));
+
+    $query = editProduit($id);
+    $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($conn));
+    }
+
+    if (mysqli_num_rows($result) === 0) {
+        die("No record found for ID: $id");
+    }
+
     $row = mysqli_fetch_assoc($result);
+
+    mysqli_free_result($result);
+
     return $row;
 }
+
 
 function update_produit($nom, $description, $prix, $photo, $categorie, $materiel, $id)
 {

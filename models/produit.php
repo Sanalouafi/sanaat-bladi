@@ -15,7 +15,7 @@ function addProduit(){
 
 
 function editProduit($id){
-    $sql= "SELECT * FROM categorie as c INNER JOIN produit as p on c.id=p.categorie_id INNER JOIN materiel as m on p.materiel_id=m.id WHERE id =$id";
+    $sql= "SELECT * FROM categorie as c INNER JOIN produit as p on c.id=p.categorie_id INNER JOIN materiel as m on p.materiel_id=m.id WHERE p.id =$id";
     return $sql;
 
 }
