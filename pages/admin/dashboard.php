@@ -145,7 +145,7 @@ if ($_SESSION['role']!=0) {
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                                 <img class="rounded-circle me-lg-2" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
-                                <span class="d-none d-lg-inline-flex">User-name</span>
+                                <span class="d-none d-lg-inline-flex"><?= $_SESSION['name'] ?></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                                 <a href="#" class="dropdown-item">My Profile</a>
@@ -234,7 +234,7 @@ if ($_SESSION['role']!=0) {
                                     <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h6 class="mb-0">User-name</h6>
+                                            <h6 class="mb-0"><?= $_SESSION['name'] ?></h6>
                                             <small>15 minutes ago</small>
                                         </div>
                                         <span>Short message goes here...</span>
@@ -244,7 +244,7 @@ if ($_SESSION['role']!=0) {
                                     <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h6 class="mb-0">User-name</h6>
+                                            <h6 class="mb-0"><?= $_SESSION['name'] ?></h6>
                                             <small>15 minutes ago</small>
                                         </div>
                                         <span>Short message goes here...</span>
@@ -254,7 +254,7 @@ if ($_SESSION['role']!=0) {
                                     <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h6 class="mb-0">User-name</h6>
+                                            <h6 class="mb-0"><?= $_SESSION['name'] ?></h6>
                                             <small>15 minutes ago</small>
                                         </div>
                                         <span>Short message goes here...</span>
@@ -264,7 +264,7 @@ if ($_SESSION['role']!=0) {
                                     <img class="rounded-circle flex-shrink-0" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="w-100 ms-3">
                                         <div class="d-flex w-100 justify-content-between">
-                                            <h6 class="mb-0">User-name</h6>
+                                            <h6 class="mb-0"><?= $_SESSION['name'] ?></h6>
                                             <small>15 minutes ago</small>
                                         </div>
                                         <span>Short message goes here...</span>
