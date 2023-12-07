@@ -1,13 +1,10 @@
 <?php
-include __DIR__ . "/../../controllers/categorie.php";
-$row = edit_cate($_GET['id']);
 
+include __DIR__ . "/../../controllers/materiel.php";
 if (isset($_POST['submit'])) {
-
-    update_cate($_POST['nom'], $_POST['id']);
+    add_mate($_POST['nom']);
 }
-
-?>
+$result = show_mate(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,15 +30,15 @@ if (isset($_POST['submit'])) {
     <link href="../../assets/css/dashboard.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark text-light">
-
+<body>
     <style>
         .cube {
             height: 10vh !important;
 
         }
     </style>
-    <div class="container-xxxl position-relative bg-white d-flex p-0">
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+
         <div class="sidebar pe-4 pb-3">
             <nav style="background: #28323A;" class="navbar bg-light navbar-light">
                 <a href="dashboard.html" class="navbar-brand mx-4 mb-3">
@@ -59,11 +56,11 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="../admin/dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="categorie/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
-                    <a href="../materiel/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
-                    <a href="../produit/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
-                </div>
+                        <a href="../admn/dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                        <a href="../categorie/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
+                        <a href="show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
+                        <a href="../produit/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
+                    </div>
 
             </nav>
         </div>
@@ -77,6 +74,9 @@ if (isset($_POST['submit'])) {
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
+                
+
+
 
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
@@ -157,54 +157,149 @@ if (isset($_POST['submit'])) {
             </nav>
 
 
+
             <div class="container-fluid pt-4 px-4" id="content">
                 <div class="container-fluid pt-4 px-4">
                     <div class="row g-4">
                         <div class="col-sm-12 col-xl-12">
                             <div class="bg-dark text-center rounded p-4">
-                                <div class="container mt-5">
 
+                                <a href="#" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal" data-aos="fade-down" data-aos-duration="1500">Add New</a>
 
-                                    <div class="container d-flex justify-content-center" style="margin-top:10%;">
-                                        <form method="post" style="width:50vw; min-width:300px;">
-                                            <div class="col d-flex justify-content-center gap-5">
-
-                                                <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
-                                                <label class="form-label">Nom:</label>
-                                                <input type="text" class="form-control" name="nom" placeholder="nom de categorie" value="<?php echo $row['nom'] ?>">
-
-
+                                <!-- Add Modal -->
+                                <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="addModalLabel">Add New Record</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-
-
-                                            <div class="row ms-1 mt-4 justify-content-end">
-                                                <button type="submit" class="btn btn-success col-3 me-3" name="submit">Update</button>
-                                                <a href="show.php" class="btn btn-danger col-3">Cancel</a>
+                                            <div class="modal-body">
+                                                <form method="post">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Nom:</label>
+                                                        <input type="text" class="form-control" name="nom" placeholder="Entrer le nom de categorie" required>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" name="submit" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </form>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
+
+
+                                <table class="table table-hover text-center">
+                                    <thead class="table-dark">
+                                        <tr data-aos="fade-left" data-aos-duration="1500">
+                                            <th scope="col-6" data-aos="fade-left"> nom</th>
+
+                                            <th scope="col-6" data-aos="fade-left">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBody" data-aos="fade-right" data-aos-duration="1500">
+                                        <?php
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                        ?>
+                                            <tr>
+                                                <td><?= $row['nom']; ?></td>
+
+                                                <td>
+                                                    <a href="edit.php?id=<?= $row['id'] ?>" class="link-dark">
+                                                        <i class='bx bxs-pencil fs-5 me-3'></i>
+                                                    </a>
+                                                    <a href="" data-delete='<?= $row['id'] ?>' class="link-danger">
+                                                        <i class='bx bxs-user-x fs-5'></i>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                        <?php }; ?>
+                                    </tbody>
+                                </table>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
+    </div>
+    <!-- Content End -->
+    <a href="" data-delete="<?= $row['id'] ?>" class="link-danger">
+        <i class='bx bxs-user-x fs-5'></i>
+    </a>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("click", function(event) {
+                var deleteButton = event.target.closest(".link-danger");
+
+                if (deleteButton) {
+                    event.preventDefault();
+
+                    var idToDelete = deleteButton.getAttribute("data-delete");
+
+                    if (confirm("Are you sure you want to delete this item?")) {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("GET", `delete.php?id=${idToDelete}`, true);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState === 4) {
+                                if (xhr.status === 200) {
+                                    console.log(xhr.responseText);
+                                    // Add additional logic based on your requirements
+                                    // For example, update the UI or reload the page
+                                } else {
+                                    console.error("Error:", xhr.statusText);
+                                }
+                            }
+                        };
+
+                        xhr.onerror = function() {
+                            console.error("Network error");
+                        };
+
+                        xhr.send();
+                    }
+                }
+            });
+        });
+    </script>
 
 
-
-        <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <script>
-            // Sidebar Toggler
-            document
-                .querySelector(".sidebar-toggler")
-                .addEventListener("click", function() {
-                    document.querySelector(".sidebar").classList.toggle("open");
-                    document.querySelector(".content").classList.toggle("open");
-                    return false;
-                });
-        </script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
+<script>
+    var currentPage = window.location.href;
+
+    var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    navLinks.forEach(function(link) {
+        if (link.href === currentPage) {
+            link.classList.add("active");
+        }
+    });
+    AOS.init();
+    // Sidebar Toggler
+    document
+        .querySelector(".sidebar-toggler")
+        .addEventListener("click", function() {
+            document.querySelector(".sidebar").classList.toggle("open");
+            document.querySelector(".content").classList.toggle("open");
+            return false;
+        });
+</script>
 
 </html>

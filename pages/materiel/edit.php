@@ -1,10 +1,10 @@
 <?php
-include __DIR__ . "/../../controllers/categorie.php";
-$row = edit_cate($_GET['id']);
+include __DIR__."/../../controllers/materiel.php";
+$row=edit_mate($_GET['id']);
 
-if (isset($_POST['submit'])) {
-
-    update_cate($_POST['nom'], $_POST['id']);
+if(isset($_POST['submit'])){
+    
+    update_mate($_POST['nom'],$_POST['id']);
 }
 
 ?>
@@ -59,11 +59,11 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="../admin/dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="categorie/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
-                    <a href="../materiel/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
-                    <a href="../produit/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
-                </div>
+                        <a href="../admin/dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                        <a href="../categorie/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
+                        <a href="materiel/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
+                        <a href="../produit/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
+                    </div>
 
             </nav>
         </div>
