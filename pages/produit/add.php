@@ -102,7 +102,7 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
                         </div>
                     </div>
@@ -112,13 +112,10 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="categories.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
-                    <a href="materiels.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
-                    <a href="artisants.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Artisant</a>
-                    <a href="produits.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>produits</a>
-
-
+                    <a href="../admin/dashboard.php" class="nav-item nav-link" id="dashboard-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="../categorie/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Categories</a>
+                    <a href="./materiel/show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Materiels</a>
+                    <a href="show.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>produits</a>
                 </div>
 
             </nav>
@@ -143,7 +140,7 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">User-name send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -153,7 +150,7 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">User-name send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -163,7 +160,7 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                                    <img class="rounded-circle" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">User-name send you a message</h6>
                                         <small>15 minutes ago</small>
@@ -200,7 +197,7 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.png" alt="" style="width: 40px; height: 40px;">
+                            <img class="rounded-circle me-lg-2" src="../../assets/images/user.png" alt="" style="width: 40px; height: 40px;">
                             <span class="d-none d-lg-inline-flex">User-name</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
@@ -223,7 +220,7 @@ $result=add_produit($nom,$descreption,$prix,$folder,$categorie,$materiel);
                             <div class="container d-flex justify-content-center" style="margin-top:5%;">
                                     <form  method="POST" enctype="multipart/form-data" style="width:50vw; min-width:300px;">
                                         <div class="card">
-                                            <img src="img/user.png" alt="image" id="image">
+                                            <img src="../../assets/images/user.png" alt="image" id="image">
                                             <label for="input-file">Choose Image</label>
                                             <input type="file" accept="image/jpg , image/png , image/jpeg" id="input-file" name="photo" required>
                                         </div>
