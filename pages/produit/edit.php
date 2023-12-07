@@ -256,8 +256,7 @@ if (isset($_POST['submit'])) {
                                                     <label class="form-label">categorie:</label>
 
                                                     <select name="categorie" class="form-control">
-                                                        <option value="<?php $row['id'] ?>"><?= $row['categorie_nom']; ?></option>
-
+                                                    <option value="<?php echo $row['categorie_id']; ?>"><?php echo $row['c.nom']; ?></option>
                                                         <?php
                                                         while ($row_categorie = mysqli_fetch_assoc($result_categorie)) {
                                                             echo '<option value="' . $row_categorie['id'] . '">' . $row_categorie['nom'] .  '</option>';
@@ -270,8 +269,7 @@ if (isset($_POST['submit'])) {
                                                     <label class="form-label">materiel:</label>
 
                                                     <select name="materiel" class="form-control">
-                                                        <option value="<?php $row['id'] ?>"><?= $row['materiel_nom']; ?></option>
-                                                        <?php
+                                                    <option value="<?php echo $row['materiel_id']; ?>"><?php echo $row['m.nom']; ?></option>                                                        <?php
                                                         while ($row_mate = mysqli_fetch_assoc($result_materiel)) {
                                                             echo '<option value="' . $row_mate['id'] . '">' . $row_mate['nom'] .  '</option>';
                                                         }
