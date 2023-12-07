@@ -280,7 +280,7 @@ if (isset($_POST['submit'])) {
 
                                             <div class="row ms-1 mt-4 justify-content-end">
                                                 <button type="submit" class="btn btn-success col-3 me-3" name="submit">Update</button>
-                                                <a href="produits.php" class="btn btn-danger col-3">Cancel</a>
+                                                <a href="show.php" class="btn btn-danger col-3">Cancel</a>
                                             </div>
                                         </form>
                                     </div>
